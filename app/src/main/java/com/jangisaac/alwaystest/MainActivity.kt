@@ -68,4 +68,99 @@ class MainActivity : AppCompatActivity() {
                 }
             })
     }
+    
+//     @SuppressLint("SetJavaScriptEnabled")
+//     private void initWebView() {
+//         mWebView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+//         mWebView.getSettings().setAppCacheEnabled(true);
+//         mWebView.getSettings().setAppCachePath(getCacheDir().getPath());
+//         mWebView.getSettings().setJavaScriptEnabled(true);
+//         mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+//         mWebView.getSettings().setSupportMultipleWindows(true);
+//         mWebView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+//         mWebView.getSettings().setBuiltInZoomControls(true);
+//         mWebView.getSettings().setSupportZoom(true);
+//         mWebView.getSettings().setDisplayZoomControls(false);
+//         mWebView.getSettings().setDomStorageEnabled(true);
+
+//         mWebView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+
+//         mWebView.setHorizontalScrollBarEnabled(false);
+//         mWebView.setVerticalScrollBarEnabled(true);
+//         mWebView.addJavascriptInterface(mJavaScriptInterface, "custommeapp");
+//         mWebView.addJavascriptInterface(mJavaScriptInterfaceForChat, "AppJSInterface");
+//         io.imqa.mpm.network.webview.WebviewInterface imqaJavscript = new io.imqa.mpm.network.webview.WebviewInterface();
+//         mWebView.addJavascriptInterface(imqaJavscript, "ImqaBridge");
+
+//         mWebView.setWebViewClient(mWebViewClient);
+//         mWebView.setWebChromeClient(mWebChromeClient);
+
+
+//         String checkUrl = CmConstant.getServerUrl() + CmConstant.URL_MAIN_PAGE;
+//         CmLog.w("CmConstant.ONELINK_TARGET_URL =" + CmConstant.ONELINK_TARGET_URL);
+//         if(CmConstant.ONELINK_TARGET_URL != "") {
+//             checkUrl = CmConstant.ONELINK_TARGET_URL;
+//             CmConstant.ONELINK_TARGET_URL = "";
+//         }
+
+//         String loadMainUrl = checkUrl;
+
+//         // 앱 실행시 자동로그인 체크
+//         if (isFirst && !checkRememberMe(loadMainUrl) && CmConstant.IS_FRIST_MAIN) {
+//             CookieManager.getInstance().removeSessionCookies(new ValueCallback<Boolean>() {
+//                 @Override
+//                 public void onReceiveValue(Boolean aBoolean) {
+//                     loadUrl(loadMainUrl);
+//                 }
+//             });
+//             isFirst = false;
+
+//         } else {
+//             loadUrl(loadMainUrl);
+//         }
+
+//         if(CmConstant.IS_FRIST_MAIN) {
+//             CmConstant.IS_FRIST_MAIN = false;
+//         }
+
+//         String userAgentString = CmUtil.setUserAgent(mWebView.getSettings().getUserAgentString());
+//         CmLog.d(TAG, "userAgentString [" + userAgentString + "]");
+//         mWebView.getSettings().setUserAgentString(userAgentString);
+
+//         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+//             mWebView.getSettings().setMediaPlaybackRequiresUserGesture(false);
+//         }
+
+//         // Leo Tagging
+//         AmoreTracker.setupWebView(mWebView);
+
+//         if (CmConstant.useDebugLog) {
+//             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//                 mWebView.setWebContentsDebuggingEnabled(true);
+//             }
+//         }
+
+//         CookieManager cookieManager = CookieManager.getInstance();
+//         cookieManager.setAcceptCookie(true);
+//         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//             cookieManager.setAcceptThirdPartyCookies(mWebView, true);
+//         }
+
+
+//     }
 }
+
+// public class CmJavaScriptInterface {
+
+//     private String TAG = CmJavaScriptInterface.class.getSimpleName();
+//     private final Activity mActivity;
+
+//     public CmJavaScriptInterface(Activity activity) {
+//         mActivity = activity;
+//     }
+
+//     @JavascriptInterface
+//     public void launchCamera() {
+//         ((MainActivity)mActivity).launchCamera();
+//     }
+// }
